@@ -1,0 +1,539 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+    outline: none;
+}
+body {
+    font-family: arial, sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Header */
+.header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.header .container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: unset;
+    position: relative;
+}
+.header .container .link{
+    padding-left: 15px;
+}
+.header .container .link a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    line-height: 24px;
+    font-size: 13px;
+}
+.header .container .link a:hover{
+    text-decoration: underline;
+}
+.header .container .google-products{
+    margin-left: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.header .container .google-products::after{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.18s ease-out 0.18s;
+    font-family: sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-shadow: none !important;
+    font-size: .8rem !important;
+    background: rgba(33,37,41,0.9);
+    border-radius: 4px;
+    color: #fff;
+    content: "Google apps";
+    padding: .5em 1em;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 11;
+    top: 45px;
+}
+.header .container .google-products:hover{
+    background-color: #F0F0F0;
+}
+.header .container .google-products:hover::after{
+    opacity: 1;
+}
+.header .container .google-products a{
+    height: 25px;
+}
+.header .container .google-products svg{
+    width: 25px;
+    height: 25px;
+}
+.header .container .google-products svg path{
+    fill: #5f6368;
+    opacity: 1;
+}
+.header .container .google-account{
+    padding: 5px;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.header .container .google-account::after{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.18s ease-out 0.18s;
+    font-family: sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-shadow: none !important;
+    font-size: .8rem !important;
+    background: rgba(33,37,41,0.9);
+    border-radius: 4px;
+    color: #fff;
+    content: "Google Account \00000a Shahier Nashaat \00000a shahiernash@gmail.com";
+    padding: .5em 1em;
+    position: absolute;
+    white-space: pre;
+    z-index: 11;
+    top: 45px;
+    right: 5px;
+}
+.header .container .google-account:hover{
+    background-color: #F0F0F0;
+}
+.header .container .google-account:hover::after{
+    opacity: 1;
+}
+.header .container .google-account img{
+    border-radius: 50%;
+}
+.header .container .google-product-tap{
+    width: 328px;
+    height: 448px;
+    flex-wrap: wrap;
+    z-index: 10;
+    background-color: white;
+}
+.header .container .google-account-tap{
+    width: 338px;
+    height: 463px;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    background-color: white;
+}
+.header .container .google-product-tap, 
+.header .container .google-account-tap{
+    display: none;
+    position: absolute;
+    top: 64px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #c5c3c3, -1px 1px 1px 1px #c5c3c3, 1px -1px 1px 1px #c5c3c3, -1px -1px 1px 1px #c5c3c3;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.header .container .google-product-tap::-webkit-scrollbar,
+.header .container .google-account-tap::-webkit-scrollbar{
+    width: 10px;
+}
+.header .container .google-product-tap::-webkit-scrollbar-thumb,
+.header .container .google-account-tap::-webkit-scrollbar-thumb{
+    background: rgb(202, 202, 202); 
+    border-radius: 20px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.header .container .google-product-tap a{
+    text-decoration: none;
+    height: min-content;
+}
+.header .container .google-product-tap .google-product-icon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90px;
+}
+.header .container .google-product-tap .google-product-icon:hover{
+    background-color: rgb(228, 228, 228);
+}
+.header .container .google-product-tap .google-product-icon img{
+    width: 40px;
+}
+.header .container .google-product-tap .google-product-icon #account-image{
+    border-radius: 50%;
+}
+.header .container .google-product-tap .google-product-icon h5{
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+.header .container .google-product-tap hr{
+    width: 100%;
+}
+.header .container .google-product-tap .more-products{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.header .container .google-product-tap .more-products button{
+    color: rgb(55, 55, 253);
+    border-radius: 5px;
+    border: 1px solid rgb(179, 179, 179);
+    width: 180px;
+    cursor: pointer;
+}
+.header .container .google-product-tap .more-products button:hover{
+    border: 1px solid rgb(136, 136, 255);
+}
+.header .container .google-account-tap .profile-img{
+    position: relative;
+}
+.header .container .google-account-tap .profile-img img{
+    border-radius: 50%;
+}
+.header .container .google-account-tap .profile-img div{
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px #dddddd, -1px 1px 1px 1px #dddddd, 1px -1px 1px 1px #dddddd, -1px -1px 1px 1px #dddddd;
+}
+.header .container .google-account-tap .profile-img a{
+    text-decoration: none;
+}
+.header .container .google-account-tap .profile-img a i{
+    color: black;
+}
+.header .container .google-account-tap .profile-img a:hover i{
+    color: rgb(63, 63, 252);
+}
+.header .container .google-account-tap .first-and-last-name{
+    margin-top: 15px;
+}
+.header .container .google-account-tap .email{
+    color: #5f6368;
+    margin-top: 5px;
+    font: 400 14px/19px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+.header .container .google-account-tap .manage-account{
+    margin-top: 15px;
+}
+.header .container .google-account-tap .manage-account button{
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    width: 234px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 100px;
+    color: #3c4043;
+    font: 500 14px/16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+.header .container .google-account-tap .manage-account button:hover{
+    background-color: #f8f4f4;
+}
+.header .container .google-account-tap hr{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.header .container .google-account-tap .other-account,
+.header .container .google-account-tap .add-other-account{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.header .container .google-account-tap .other-account a,
+.header .container .google-account-tap .add-other-account a{
+    text-decoration: none;
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.header .container .google-account-tap .other-account a:hover,
+.header .container .google-account-tap .add-other-account a:hover{
+    background-color: #f8f4f4;
+}
+.header .container .google-account-tap .other-account a .account-content,
+.header .container .google-account-tap .add-other-account a .account-content{
+    display: flex;
+}
+.header .container .google-account-tap .other-account a .account-content img,
+.header .container .google-account-tap .add-other-account a .account-content i{
+    border-radius: 50%;
+    width: 35px;
+    height: auto;
+    margin-left: 10px;
+}
+.header .container .google-account-tap .other-account a .account-content .name-and-email,
+.header .container .google-account-tap .add-other-account a .account-content .name-and-email{
+    margin-left: 15px;
+}
+.header .container .google-account-tap .other-account a .account-content div:first-child,
+.header .container .google-account-tap .add-other-account a .account-content div:first-child{
+    color: #3c4043;
+    font: 500 14px/18px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    letter-spacing: 0.25px;
+}
+.header .container .google-account-tap .other-account a .account-content div:last-child{
+    color: #5f6368;
+    font: 400 12px / 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+.header .container .google-account-tap .add-other-account a{
+    padding-top: 20px;
+}
+.header .container .google-account-tap .add-other-account a .account-content i{
+    color: #5f6368;
+    margin-left: 17px;
+}
+.header .container .google-account-tap .second-hr{
+    margin-top: 0;
+}
+.header .container .google-account-tap .sign-out{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .container .google-account-tap .sign-out a{
+    color: #3c4043;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    font: 500 14px/16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    letter-spacing: .15px;
+    margin: 16px;
+    outline: 0;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+}
+.header .container .google-account-tap .sign-out a:hover{
+    background-color: #f8f4f4;
+}
+.header .container .google-account-tap .third-hr{
+    width: 100%;
+    margin-top: 0;
+}
+.header .container .google-account-tap .policy-and-terms{
+    margin-top: 15px;
+}
+.header .container .google-account-tap .policy-and-terms .policy,
+.header .container .google-account-tap .policy-and-terms .terms{
+    border-radius: 4px;
+    color: #5f6368;
+    display: inline-block;
+    font: 400 12px / 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    outline: 0;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-align: center;
+    white-space: normal;
+}
+.header .container .google-account-tap .policy-and-terms .policy:hover,
+.header .container .google-account-tap .policy-and-terms .terms:hover{
+    background-color: #f8f4f4;
+}
+/* End Header */
+/* Start Main Content */
+.main-content{
+    height: calc(100vh - 162px);
+    min-height: 300px;
+}
+.main-content .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-content .container .google-img{
+    max-height: 92px;
+    display: flex;
+    justify-content: center;
+}
+.main-content .container .search-bar{
+    display: flex;
+    justify-content: center;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    background: #fff;
+    width: 100%;
+    max-width: 584px;
+    min-width: 270px;
+    padding: 10px 15px;
+    margin-top: 25px;
+}
+.main-content .container .search-bar .search-input{
+    height: 25px;
+    background-color: transparent;
+    flex: 100%;
+    border: 0;
+    padding: 10px;
+}
+.main-content .container .search-bar i{
+    margin-top: 5px;
+}
+.main-content .container .search-bar .fa-search{
+    color: #9aa0a6;
+}
+.main-content .container .search-bar a{
+    text-decoration: none;
+    position: relative;
+}
+.main-content .container .search-bar a::after{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.18s ease-out 0.18s;
+    font-family: sans-serif !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-shadow: none !important;
+    font-size: .8rem !important;
+    background: rgba(33,37,41,0.9);
+    border-radius: 4px;
+    color: #fff;
+    content: "Search by voice";
+    padding: .5em 1em;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 11;
+    top: 26px;
+    right: -54px;
+}
+.main-content .container .search-bar a:hover::after{
+    opacity: 1;
+}
+.main-content .container .search-bar a i{
+    color: #4285F4;
+}
+.main-content .container .search-buttons{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-content .container .search-buttons a{
+    text-decoration: none;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 5px 10px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.main-content .container .search-buttons a:hover{
+    border-color: #DADCE0;
+}
+.main-content .container .language-google-offered-with{
+    color: #3c4043;
+    display: inline-block;
+    line-height: 28px;
+    font-size: small;
+}
+.main-content .container .language-google-offered-with a{
+    text-decoration: none;
+}
+.main-content .container .language-google-offered-with a:hover{
+    text-decoration: underline;
+}
+/* End Main Content */
+/* Start Footer */
+.footer{
+    width: 100%;
+    height: 94px;
+    background-color: #F2F2F2;
+}
+.footer .container{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+.footer .country{
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+}
+.footer .links{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer .links a{
+    text-decoration: none;
+    color: #70757a;
+    padding: 15px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.footer .links a:hover{
+    text-decoration: underline;
+}
+/* End Footer */
