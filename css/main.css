@@ -44,14 +44,14 @@ body {
 .header {
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-right: 5px;
-    padding-left: 5px;
 }
 .header .container{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: unset;
+    margin-left: unset;
+    width: 100%;
     position: relative;
 }
 .header .container .link{
@@ -505,8 +505,9 @@ body {
 /* Start Footer */
 .footer{
     width: 100%;
-    height: 94px;
+    min-height: 94px;
     background-color: #F2F2F2;
+    padding-bottom: 10px;
 }
 .footer .container{
     margin-left: 0;
