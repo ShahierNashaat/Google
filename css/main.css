@@ -168,7 +168,7 @@ body {
     z-index: 10;
     background-color: white;
 }
-@media (max-width: 540px) {
+@media (max-width: 400px) {
     .header .container .google-account-tap {
         width: auto;
     }
