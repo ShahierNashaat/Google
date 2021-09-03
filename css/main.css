@@ -14,6 +14,9 @@ html {
 }
 body {
     font-family: arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .container {
     padding-left: 15px;
@@ -44,6 +47,9 @@ body {
 .header {
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
+    flex-grow: 1;
 }
 .header .container{
     display: flex;
@@ -149,18 +155,27 @@ body {
 }
 .header .container .google-product-tap{
     width: 328px;
-    height: 448px;
+    max-height: 448px;
     flex-wrap: wrap;
     z-index: 10;
     background-color: white;
 }
 .header .container .google-account-tap{
     width: 338px;
-    height: 463px;
+    max-height: 463px;
     align-items: center;
     flex-direction: column;
     z-index: 10;
     background-color: white;
+}
+@media (max-width: 540px) {
+    .header .container .google-account-tap {
+        width: auto;
+    }
+    .header .container .google-product-tap{
+        width: auto;
+        justify-content: space-evenly;
+    }
 }
 .header .container .google-product-tap, 
 .header .container .google-account-tap{
@@ -394,7 +409,7 @@ body {
 /* End Header */
 /* Start Main Content */
 .main-content{
-    height: calc(100vh - 162px);
+    flex-grow: 8.5;
     min-height: 300px;
 }
 .main-content .container{
@@ -456,6 +471,11 @@ body {
     top: 26px;
     right: -54px;
 }
+@media (max-width: 540px) {
+    .main-content .container .search-bar a::after {
+        right: -20px;
+    }
+}
 .main-content .container .search-bar a:hover::after{
     opacity: 1;
 }
@@ -505,7 +525,7 @@ body {
 /* Start Footer */
 .footer{
     width: 100%;
-    min-height: 94px;
+    flex-grow: 0.5;
     background-color: #F2F2F2;
     padding-bottom: 10px;
 }
